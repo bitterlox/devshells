@@ -1,0 +1,3 @@
+[submodule "koreader/koreader"]
+	path = koreader/koreader
+	url = git+ssh://git@github.com/bitterlox/koreader.git
