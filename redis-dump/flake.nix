@@ -16,14 +16,22 @@
         let
           gems = pkgs.bundlerEnv {
             name = "gems-for-redis-dump";
-            gemdir = ./redis-dump;
+            gemfile = ./Gemfile;
+            lockfile = ./Gemfile.lock;
             gemset = ./gemset.nix;
+            exes = [
+              "redis-dump"
+              "redis-load"
+            ];
+
           };
         in
         {
           devShells.default = pkgs.mkShell {
             name = "koreader devenv";
-            packages = [ gems gems.wrappedRuby
+            packages = [
+              gems
+              gems.wrappedRuby
             ];
             shellHook = ''
               echo "welcome to a koreader devshell"
