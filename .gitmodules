@@ -1,3 +1,6 @@
 [submodule "koreader/koreader"]
 	path = koreader/koreader
 	url = git+ssh://git@github.com/koreader/koreader
+[submodule "redis-dump/redis-dump"]
+	path = redis-dump/redis-dump
+	url = https://github.com/delano/redis-dump.git
